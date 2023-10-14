@@ -1,0 +1,14 @@
+.sidebar {
+    background-color: var(--color-primary);
+    color: white;
+    width: 20vw;
+}
+
+/* .sidebarHeading{
+} */
+
+@media (max-width: 500px) {
+    .sidebar {
+        width: 100vw;
+    }
+}
