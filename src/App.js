@@ -1,13 +1,16 @@
-import Sidebar from "./components/Sidebar/Sidebar";
-import Dashboard from "./components/Dashboard/Dashboard";
+import Dashboard from "./components/pages/Dashboard/Dashboard";
+import { Routes, Route, BrowserRouter } from "react-router-dom";
 import "./App.css";
 
 function App() {
     return (
-        <div className="container">
-            <Sidebar />
-            <Dashboard />
-        </div>
+        <>
+            <BrowserRouter>
+                <Routes>
+                    <Route path="/" exact element={<Dashboard />}></Route>
+                </Routes>
+            </BrowserRouter>
+        </>
     );
 }
 

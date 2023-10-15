@@ -1,14 +1,18 @@
 .sidebar {
-    background-color: var(--color-primary);
+    background-color: var(--color-primary) !important;
     color: white;
-    width: 20vw;
+    /* width: 20vw; */
+}
+
+.statsCard{
+    /* display: flex; */
 }
 
 /* .sidebarHeading{
 } */
 
-@media (max-width: 500px) {
+/* @media (max-width: 500px) {
     .sidebar {
         width: 100vw;
     }
-}
+} */
