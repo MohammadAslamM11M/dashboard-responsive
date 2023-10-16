@@ -1,11 +1,7 @@
 .sidebar {
-    background-color: var(--color-primary) !important;
-    color: white;
+    /* background-color: var(--color-primary) !important;
+    color: white; */
     /* width: 20vw; */
-}
-
-.statsCard{
-    /* display: flex; */
 }
 
 /* .sidebarHeading{

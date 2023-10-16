@@ -1,0 +1,12 @@
+.statsCard{
+    display: flex;
+    justify-content: center;
+}
+
+@media (max-width: 500px) {
+    .statsCard {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+}

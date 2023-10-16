@@ -1,4 +1,4 @@
-import Dashboard from "./components/pages/Dashboard/Dashboard";
+import Home from "./components/pages/Home/Home";
 import { Routes, Route, BrowserRouter } from "react-router-dom";
 import "./App.css";
 
@@ -7,7 +7,7 @@ function App() {
         <>
             <BrowserRouter>
                 <Routes>
-                    <Route path="/" exact element={<Dashboard />}></Route>
+                    <Route path="/" exact element={<Home />}></Route>
                 </Routes>
             </BrowserRouter>
         </>

@@ -23,6 +23,7 @@ import SearchIcon from "@mui/icons-material/Search";
 import Grid from "@mui/material/Grid";
 import Paper from "@mui/material/Paper";
 import { useNavigate } from "react-router-dom";
+import { useAppStore } from "../../appStore";
 import styles from "./Sidebar.module.css";
 
 const drawerWidth = 240;
@@ -124,7 +125,8 @@ const Item = styled(Paper)(({ theme }) => ({
 
 export default function Sidebar() {
     const theme = useTheme();
-    const [open, setOpen] = React.useState(false);
+    // const [open, setOpen] = React.useState(false);
+    const open = useAppStore((state) => state.dopen);
 
     const navigate = useNavigate();
 
@@ -133,9 +135,7 @@ export default function Sidebar() {
             <Drawer variant="permanent" open={open}>
                 <DrawerHeader>
                     <h1>Dashboard</h1>
-                    <IconButton onClick={() => setOpen(!open)}>
-                        {!open ? <ChevronRightIcon /> : <ChevronLeftIcon />}
-                    </IconButton>
+                    <IconButton>{!open ? <ChevronRightIcon /> : <ChevronLeftIcon />}</IconButton>
                 </DrawerHeader>
                 <List>
                     {["Dashboard", "Products", "Customers", "Income", "Promote", "Help"].map((text, index) => (
