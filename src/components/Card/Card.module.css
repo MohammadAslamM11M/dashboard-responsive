@@ -1,11 +1,24 @@
 .customCard {
-    margin: 10px;
+    margin: 10px 30px;
     max-width: 345px;
+}
+
+.graphCard {
+    margin: 10px 30px;
+    width: 100%;
+}
+
+.pieCard {
+    margin: 10px 30px;
+    /* max-width: 400px; */
 }
 
 @media (max-width: 500px) {
     .customCard {
         margin: 10px 30px;
+        max-width: 245px;
+    }
+    .graphCard {
         max-width: 245px;
     }
 }
