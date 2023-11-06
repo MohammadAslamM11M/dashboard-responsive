@@ -1,0 +1,49 @@
+.customCard {
+    margin: 10px 30px;
+    max-width: 345px;
+}
+
+.graphCard {
+    width: 100%;
+    border-radius: 15px !important;
+}
+
+.barGraph {
+    display: flex;
+    margin: 10px auto;
+    padding: 0px;
+}
+
+.barGraphRanButtonIn{
+    background-color: #84b884;
+    border: none;
+    border-radius: 2px;
+    width: 20px;
+    height: 20px;
+    margin: 0px 5px;
+}
+
+.barGraphRanButtonOut{
+    background-color: #47b747;
+    border: none;
+    border-radius: 2px;
+    width: 20px;
+    height: 20px;
+    margin: 0px 5px;
+}
+
+.lineChart {
+    border: 1px solid lightgray;
+    border-radius: 2px;
+    margin: 0px 5px;
+}
+
+@media (max-width: 500px) {
+    .customCard {
+        margin: 10px 30px;
+        max-width: 245px;
+    }
+    .graphCard {
+        max-width: 245px;
+    }
+}

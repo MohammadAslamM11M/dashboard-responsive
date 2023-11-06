@@ -3,8 +3,8 @@ import { styled } from "@mui/material/styles";
 import Box from "@mui/material/Box";
 import Paper from "@mui/material/Paper";
 import Grid from "@mui/material/Grid";
-import ActionAreaCard from "../../../Card/Card";
-import BarGraph from "../../../BarGraph/BarGraph";
+import CheckingAccount from "../../../CheckingAccount/CheckingAccount";
+import TotalCashFlow from "../../../TotalCashFlow/TotalCashFlow";
 import styles from "./Dashboard.module.css";
 
 const Item = styled(Paper)(({ theme }) => ({
@@ -18,21 +18,18 @@ const Item = styled(Paper)(({ theme }) => ({
 const Dashboard = () => {
     return (
         <Box sx={{ flexGrow: 1, marginTop: "80px" }}>
-            <Grid container spacing={3}>
-                <Grid item xs={12} className={styles.statsCard}>
-                    <ActionAreaCard>xs=8</ActionAreaCard>
-                    <ActionAreaCard>xs=8</ActionAreaCard>
-                    <ActionAreaCard>xs=8</ActionAreaCard>
-                    <ActionAreaCard>xs=8</ActionAreaCard>
+            <Grid container spacing={1} className={styles.cardmargin}>
+                <Grid item xs={12} md={6} className={styles.statsCard}>
+                    <CheckingAccount>xs=8</CheckingAccount>
                 </Grid>
-                <Grid item xs={8} className={styles.graphCard}>
-                    <BarGraph>xs=8</BarGraph>
+                <Grid item xs={12} md={6} className={styles.statsCard}>
+                    <TotalCashFlow>xs=8</TotalCashFlow>
                 </Grid>
-                <Grid item xs={4} className={styles.graphCard}>
-                    <ActionAreaCard>xs=4</ActionAreaCard>
+                <Grid item xs={12} md={6} className={styles.statsCard}>
+                    <TotalCashFlow>xs=8</TotalCashFlow>
                 </Grid>
-                <Grid item xs={12}>
-                    <ActionAreaCard>xs=4</ActionAreaCard>
+                <Grid item xs={12} md={6} className={styles.statsCard}>
+                    <TotalCashFlow>xs=8</TotalCashFlow>
                 </Grid>
             </Grid>
         </Box>

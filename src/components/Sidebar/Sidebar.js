@@ -9,6 +9,7 @@ import CssBaseline from "@mui/material/CssBaseline";
 import Typography from "@mui/material/Typography";
 import Divider from "@mui/material/Divider";
 import IconButton from "@mui/material/IconButton";
+import AccountBalanceWalletIcon from '@mui/icons-material/AccountBalanceWallet';
 import MenuIcon from "@mui/icons-material/Menu";
 import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
@@ -138,7 +139,7 @@ export default function Sidebar() {
                     <IconButton>{!open ? <ChevronRightIcon /> : <ChevronLeftIcon />}</IconButton>
                 </DrawerHeader>
                 <List>
-                    {["Dashboard", "Products", "Customers", "Income", "Promote", "Help"].map((text, index) => (
+                    {["Dashboard", "Accounts", "Payroll", "Reports", "Advisor", "Contact"].map((text, index) => (
                         <ListItem
                             key={text}
                             disablePadding
@@ -161,7 +162,7 @@ export default function Sidebar() {
                                         justifyContent: "center",
                                     }}
                                 >
-                                    {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+                                    {index % 2 === 0 ? <AccountBalanceWalletIcon /> : <MailIcon />}
                                 </ListItemIcon>
                                 <ListItemText primary={text} sx={{ opacity: open ? 1 : 0 }} />
                             </ListItemButton>

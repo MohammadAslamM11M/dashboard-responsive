@@ -20,3 +20,8 @@
 body {
     height: 100%;
 }
+
+.MuiPaper-root{
+    background-color: white !important;
+    color: black !important;
+}

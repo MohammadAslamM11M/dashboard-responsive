@@ -8,7 +8,7 @@ const Home = () => {
     return (
         <>
             <Navbar />
-            <Box sx={{ display: "flex" }}>
+            <Box sx={{ display: "flex", backgroundColor: "#f0eded" }}>
                 <Sidebar />
                 <Dashboard />
             </Box>

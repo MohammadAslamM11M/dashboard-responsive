@@ -1,6 +1,9 @@
 .statsCard{
-    display: flex;
-    justify-content: center;
+    padding: 10px;
+}
+
+.cardmargin{
+    padding: 20px;
 }
 
 @media (max-width: 500px) {
