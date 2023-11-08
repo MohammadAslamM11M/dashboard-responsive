@@ -1,3 +1,7 @@
+.container{
+    display: block;
+}
+
 .customCard {
     margin: 10px 30px;
     max-width: 345px;
@@ -46,11 +50,14 @@
 }
 
 @media (max-width: 500px) {
+    .constainer{
+        display: flex;
+    }
     .customCard {
         margin: 10px 30px;
         max-width: 245px;
     }
     .graphCard {
-        max-width: 245px;
+        max-width: 500px;
     }
 }

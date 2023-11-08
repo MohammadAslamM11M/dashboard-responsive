@@ -12,11 +12,6 @@ export default function InvoicesOwed() {
     const chartRef = useRef();
     const [data, setData] = useState(Array.from({ length: 12 }, () => Math.floor(Math.random() * 30)).slice(0, 6));
 
-    const randomizeData = () => {
-        const randomData = Array.from({ length: 12 }, () => Math.floor(Math.random() * 30)).slice(0, 6);
-        setData(randomData);
-    };
-
     useEffect(() => {
         const width = 400;
         const height = 250;

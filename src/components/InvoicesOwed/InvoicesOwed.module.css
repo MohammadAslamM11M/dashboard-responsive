@@ -16,3 +16,13 @@
     margin: auto;
     padding: 0px;
 }
+
+@media (max-width: 500px) {
+    .customCard {
+        margin: 10px 30px;
+        max-width: 245px;
+    }
+    .graphCard {
+        max-width: 500px;
+    }
+}

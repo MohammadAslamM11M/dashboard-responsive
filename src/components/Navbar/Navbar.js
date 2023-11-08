@@ -12,7 +12,6 @@ import Menu from "@mui/material/Menu";
 import MenuIcon from "@mui/icons-material/Menu";
 import SearchIcon from "@mui/icons-material/Search";
 import AccountCircle from "@mui/icons-material/AccountCircle";
-import MailIcon from "@mui/icons-material/Mail";
 import NotificationsIcon from "@mui/icons-material/Notifications";
 import MoreIcon from "@mui/icons-material/MoreVert";
 import { useAppStore } from "../../appStore";
@@ -170,7 +169,7 @@ export default function PrimarySearchAppBar() {
                         ASSIDUUS
                     </Typography>
                     <Box sx={{ flexGrow: 1 }} />
-                    <Search style={{backgroundColor: "#f0eded"}}>
+                    <Search style={{ backgroundColor: "#f0eded" }}>
                         <SearchIconWrapper>
                             <SearchIcon />
                         </SearchIconWrapper>

@@ -1,13 +1,10 @@
 import React from "react";
 import Card from "@mui/material/Card";
-import CardHeader from "@mui/material/CardHeader";
-import { CardContent } from "@mui/material";
 import Table from "@mui/material/Table";
 import TableBody from "@mui/material/TableBody";
 import TableCell from "@mui/material/TableCell";
 import TableContainer from "@mui/material/TableContainer";
 import TableRow from "@mui/material/TableRow";
-import TableHead from "@mui/material/TableHead";
 import Paper from "@mui/material/Paper";
 import styles from "./AccountWatchlist.module.css";
 
