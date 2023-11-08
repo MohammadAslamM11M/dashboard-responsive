@@ -8,27 +8,41 @@ import styles from "../CheckingAccount/CheckingAccount.module.css";
 
 export default function CheckingAccount() {
     const chartRef = useRef();
+    const [selectedMonth, setSelectedMonth] = useState("January");
+    const [data, setData] = useState([]);
 
-    useEffect(() => {
-        const data = [
-            { x: 1, y: 4 },
-            { x: 2, y: 5 },
-            { x: 3, y: 12 },
-            { x: 4, y: 6 },
-            { x: 5, y: 10 },
-            { x: 6, y: 5 },
-            { x: 7, y: 1 },
-            { x: 8, y: 8 },
-            { x: 9, y: 1 },
-        ];
+    const generateRandomData = (month) => {
+        const data = [];
+        for (let i = 1; i <= 30; i++) {
+            const randomY = Math.floor(Math.random() * 10) + 1;
+            data.push({ x: i, y: randomY });
+        }
+        return data;
+    };
 
+    const handleMonthChange = (event) => {
+        const selected = event.target.value;
+        setSelectedMonth(selected);
+        const newData = generateRandomData(selected);
+        setData(newData);
+    };
+
+    // useEffect(() => {
+    //     const initialData = generateRandomData("January");
+    //     setData(initialData);
+    // }, []);
+
+    const renderChart = () => {
         const width = 600;
         const height = 225;
         const margin = { top: 20, right: 20, bottom: 30, left: 0 };
         const innerWidth = width - margin.left - margin.right;
         const innerHeight = height - margin.top - margin.bottom;
 
-        const svg = d3.select(chartRef.current).attr("width", width).attr("height", height);
+        const svg = d3.select(chartRef.current);
+
+        svg.selectAll("*").remove();
+        svg.attr("width", width).attr("height", height);
 
         const xScale = d3
             .scaleLinear()
@@ -69,7 +83,16 @@ export default function CheckingAccount() {
             .attr("text-anchor", "middle")
             .attr("font-size", "12px")
             .attr("fill", "black");
-    }, []);
+    };
+
+    useEffect(() => {
+        const initialData = generateRandomData(selectedMonth);
+        setData(initialData);
+    }, [selectedMonth]);
+
+    useEffect(() => {
+        renderChart(data);
+    }, [data]);
 
     return (
         <>
@@ -84,19 +107,24 @@ export default function CheckingAccount() {
                                 <option value="3">3</option>
                                 <option value="4">4</option>
                             </select>
-                            <select name="manage" className={styles.lineChart}>
-                                <option value="1">January</option>
-                                <option value="2">February</option>
-                                <option value="3">March</option>
-                                <option value="4">April</option>
-                                <option value="4">May</option>
-                                <option value="4">June</option>
-                                <option value="4">July</option>
-                                <option value="4">August</option>
-                                <option value="4">September</option>
-                                <option value="4">October</option>
-                                <option value="4">November</option>
-                                <option value="4">December</option>
+                            <select
+                                name="manage"
+                                className={styles.lineChart}
+                                onChange={handleMonthChange}
+                                value={selectedMonth}
+                            >
+                                <option value="January">January</option>
+                                <option value="February">February</option>
+                                <option value="March">March</option>
+                                <option value="April">April</option>
+                                <option value="May">May</option>
+                                <option value="June">June</option>
+                                <option value="July">July</option>
+                                <option value="August">August</option>
+                                <option value="September">September</option>
+                                <option value="October">October</option>
+                                <option value="November">November</option>
+                                <option value="December">December</option>
                             </select>
                         </IconButton>
                     }
