@@ -3,11 +3,12 @@ import * as d3 from "d3";
 import Card from "@mui/material/Card";
 import IconButton from "@mui/material/IconButton";
 import { CardContent } from "@mui/material";
-import styles from "./TotalCashFlow.module.css";
+import FileUploadModal from "../FileUploadModal/FileUploadModal";
+import styles from "./InvoicesOwed.module.css";
 
 const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 
-export default function BarGraph() {
+export default function InvoicesOwed() {
     const chartRef = useRef();
     const [data, setData] = useState(Array.from({ length: 12 }, () => Math.floor(Math.random() * 30)).slice(0, 6));
 
@@ -55,22 +56,11 @@ export default function BarGraph() {
 
     return (
         <>
-            <Card className={styles.graphCard}>
+            <Card className={styles.graphCard} style={{ borderRadius: "15px" }}>
                 <div style={{ display: "flex", justifyContent: "space-between" }}>
-                    <p className={styles.cardHeading}>Total cash flow</p>
+                    <p className={styles.cardHeading}>Invoices owed to you</p>
                     <IconButton>
-                        <button
-                            className={styles.barGraphRanButtonIn}
-                            style={{ fontSize: "8px" }}
-                            onClick={randomizeData}
-                        ></button>
-                        <span>In</span>
-                        <button
-                            className={styles.barGraphRanButtonOut}
-                            style={{ fontSize: "8px" }}
-                            onClick={randomizeData}
-                        ></button>
-                        <span>Out</span>
+                        <FileUploadModal />
                     </IconButton>
                 </div>
                 <hr style={{ borderColor: "#f0eded" }} />

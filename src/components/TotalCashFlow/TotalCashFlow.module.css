@@ -9,15 +9,10 @@
     border-radius: 15px !important;
 }
 
-.cardHeading{
-    margin: 20px;
-    font-size: large;
-    font-weight: bold;
-}
-
 .barGraph {
-    display: flex;
-    margin: 10px auto;
+    display: flex !important;
+    justify-content: center !important;
+    margin: auto;
     padding: 0px;
 }
 
@@ -43,6 +38,12 @@
     border: 1px solid lightgray;
     border-radius: 2px;
     margin: 0px 5px;
+}
+
+.cardHeading{
+    margin: 20px;
+    font-size: large;
+    font-weight: bold;
 }
 
 @media (max-width: 500px) {

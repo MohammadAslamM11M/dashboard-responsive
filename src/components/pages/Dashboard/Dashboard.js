@@ -3,8 +3,10 @@ import { styled } from "@mui/material/styles";
 import Box from "@mui/material/Box";
 import Paper from "@mui/material/Paper";
 import Grid from "@mui/material/Grid";
-import CheckingAccount from "../../../CheckingAccount/CheckingAccount";
-import TotalCashFlow from "../../../TotalCashFlow/TotalCashFlow";
+import CheckingAccount from "../../CheckingAccount/CheckingAccount";
+import TotalCashFlow from "../../TotalCashFlow/TotalCashFlow";
+import InvoicesOwed from "../../InvoicesOwed/InvoicesOwed";
+import AccountWatchlist from "../../AccountWatchlist/AccountWatchlist";
 import styles from "./Dashboard.module.css";
 
 const Item = styled(Paper)(({ theme }) => ({
@@ -23,13 +25,13 @@ const Dashboard = () => {
                     <CheckingAccount>xs=8</CheckingAccount>
                 </Grid>
                 <Grid item xs={12} md={6} className={styles.statsCard}>
-                    <TotalCashFlow>xs=8</TotalCashFlow>
+                    <InvoicesOwed>xs=8</InvoicesOwed>
                 </Grid>
                 <Grid item xs={12} md={6} className={styles.statsCard}>
                     <TotalCashFlow>xs=8</TotalCashFlow>
                 </Grid>
                 <Grid item xs={12} md={6} className={styles.statsCard}>
-                    <TotalCashFlow>xs=8</TotalCashFlow>
+                    <AccountWatchlist>xs=8</AccountWatchlist>
                 </Grid>
             </Grid>
         </Box>

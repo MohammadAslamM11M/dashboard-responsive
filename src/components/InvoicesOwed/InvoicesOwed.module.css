@@ -1,0 +1,18 @@
+.graphCard {
+    width: 100%;
+    height: 100%;
+    border-radius: 15px !important;
+}
+
+.cardHeading {
+    margin: 20px;
+    font-size: large;
+    font-weight: bold;
+}
+
+.barGraph {
+    display: flex !important;
+    justify-content: center !important;
+    margin: auto;
+    padding: 0px;
+}
