@@ -166,7 +166,7 @@ export default function PrimarySearchAppBar() {
                         <MenuIcon />
                     </IconButton>
                     <Typography variant="h6" noWrap component="div" sx={{ display: { xs: "none", sm: "block" } }}>
-                        ASSIDUUS
+                        BRAND
                     </Typography>
                     <Box sx={{ flexGrow: 1 }} />
                     <Search style={{ backgroundColor: "#f0eded" }}>
